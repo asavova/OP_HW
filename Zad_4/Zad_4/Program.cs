@@ -16,7 +16,7 @@ namespace Zad_4
             {
                 result *= i;
             }
-            Console.WriteLine($"{N}! = {result}");
+            Console.WriteLine($"{N}! = {result} ");
         }
     }
 }
