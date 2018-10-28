@@ -11,7 +11,7 @@ namespace Zad_4
         static void Main(string[] args)
         {
             short N = short.Parse(Console.ReadLine());
-            int result = N;
+            int result = N;//
             for (int i = N - 1; i > 0; i--)
             {
                 result *= i;
