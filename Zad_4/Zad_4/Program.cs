@@ -10,7 +10,7 @@ namespace Zad_4
     {
         static void Main(string[] args)
         {
-            int N = int.Parse(Console.ReadLine());
+            short N = short.Parse(Console.ReadLine());
             int result = N;
             for (int i = N - 1; i > 0; i--)
             {
