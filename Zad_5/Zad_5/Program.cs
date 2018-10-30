@@ -21,19 +21,19 @@ namespace Zad_5
             uint AllReturned = 0;
             uint Returned=0;
             uint Serviced = 0;
-            int br = 1;
+            int day = 1;
             while (n != 0)
             {
                
-                if (br % 3 == 0 && Serviced < AllReturned)
+                if (day % 3 == 0 && Serviced < AllReturned)
                 {
                     workers++;
                 }
-                Returned = customers[br - 1] - workers; //input customers[br-1] >=workers               
+                Returned = customers[day - 1] - workers; //assuming the input customers is greater than or equal to workers               
                 Serviced += workers;
                 AllReturned += Returned;
 
-                br++;
+                day++;
                 n--;
             }
 
