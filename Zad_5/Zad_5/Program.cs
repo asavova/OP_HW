@@ -19,15 +19,20 @@ namespace Zad_5
 
             uint workers = 7;
             uint AllReturned = 0;
-            uint Returned = 0;
+            uint Returned=0;
             uint Serviced = 0;
             int br = 1;
-            while (n > 0)
+            while (n != 0)
             {
-                if (br % 3 == 0 && Serviced < Returned) {  workers++; }
-                Returned = (uint)Math.Abs(customers[br - 1] - workers);
-                AllReturned += Returned;
+               
+                if (br % 3 == 0 && Serviced < AllReturned)
+                {
+                    workers++;
+                }
+                Returned = customers[br - 1] - workers; //input customers[br-1] >=workers               
                 Serviced += workers;
+                AllReturned += Returned;
+
                 br++;
                 n--;
             }
