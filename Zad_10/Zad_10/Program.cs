@@ -55,21 +55,21 @@ namespace Zad_10
         static void Main(string[] args)
         {
             int[,] Arr = new int[5, 4];
-            int sum = 0;
-
+            
             Console.WriteLine($"A[5,4]");
             ReadArr(Arr);
             SortArr(Arr);
             PrintArr(Arr);
+
             for (int row = 0; row < 5; row++)
             {
+                int sum = 0;
                 for (int col = 0; col < 4; col++)
                 {
                     sum += Arr[row, col];
 
                 }
-                Console.WriteLine($"Sum_sort_row_{row+1}={sum}");
-                sum = 0;
+                Console.WriteLine($"Sum_sort_row_{row+1}={sum}");               
             }
         }
     }
