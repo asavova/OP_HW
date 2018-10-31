@@ -13,24 +13,21 @@ namespace Zad_3
             int FirstNum = int.Parse(Console.ReadLine());
             int SecondNum = int.Parse(Console.ReadLine());
             int ThirdNum = int.Parse(Console.ReadLine());
-            int Sum = 0;
+            
 
             if (FirstNum == SecondNum + ThirdNum)
-            {
-                Sum = FirstNum;
-                Console.WriteLine($"{Math.Min(SecondNum, ThirdNum)} + {Math.Max(SecondNum, ThirdNum)} = {Sum}");
+            {               
+                Console.WriteLine($"{Math.Min(SecondNum, ThirdNum)} + {Math.Max(SecondNum, ThirdNum)} = {FirstNum}");
             }
 
             else if (SecondNum == ThirdNum + FirstNum)
-            {
-                Sum = SecondNum;
-                Console.WriteLine($"{Math.Min(FirstNum, ThirdNum)} + {Math.Max(FirstNum, ThirdNum)} = {Sum}");
+            {               
+                Console.WriteLine($"{Math.Min(FirstNum, ThirdNum)} + {Math.Max(FirstNum, ThirdNum)} = {SecondNum}");
             }
 
             else if (ThirdNum == SecondNum + FirstNum)
-            {
-                Sum = ThirdNum;
-                Console.WriteLine($"{Math.Min(FirstNum, SecondNum)} + {Math.Max(FirstNum, SecondNum)} = {Sum}");
+            {              
+                Console.WriteLine($"{Math.Min(FirstNum, SecondNum)} + {Math.Max(FirstNum, SecondNum)} = {ThirdNum}");
             }
             else Console.WriteLine("No");
         }

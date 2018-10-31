@@ -8,20 +8,27 @@ namespace Zad_5
 {
     class Program
     {
+        static void ReadInput(uint[] arr,uint length)
+        {
+           
+            for (uint i = 0; i < length; i++)
+            {
+                arr[i] = uint.Parse(Console.ReadLine());
+            }
+        }
+        
         static void Main(string[] args)
         {
             uint n = uint.Parse(Console.ReadLine());
             uint[] customers = new uint[n];
-            for (int i = 0; i < n; i++)
-            {
-                customers[i] = uint.Parse(Console.ReadLine());
-            }
+
+            ReadInput(customers, n);
 
             uint workers = 7;
             uint AllReturned = 0;
             uint Returned=0;
             uint Serviced = 0;
-            int day = 1;
+            uint day = 1;
             while (n != 0)
             {
                
@@ -29,7 +36,7 @@ namespace Zad_5
                 {
                     workers++;
                 }
-                Returned = customers[day - 1] - workers; //assuming the input customers is greater than or equal to workers               
+                Returned = customers[day - 1] - workers; //assuming the value of customers is greater than or equal to workers               
                 Serviced += workers;
                 AllReturned += Returned;
 
